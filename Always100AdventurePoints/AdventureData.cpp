@@ -46,6 +46,6 @@ const char* AdventureData::GetDescription(ArgScript::DescriptionMode mode) const
 		return "Saves adventure property list data.";
 	}
 	else {
-		return "AdventureData: Saves a prop file of the adventure's property list.";
+		return "GetAdventureProp: Saves a prop file of the adventure's property list.";
 	}
 }

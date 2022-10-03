@@ -22,6 +22,9 @@
     <ClInclude Include="AdventureData.h">
       <Filter>Always100AdventurePoints</Filter>
     </ClInclude>
+    <ClInclude Include="GetAdventurePoints.h">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -31,6 +34,9 @@
       <Filter>Internal</Filter>
     </ClCompile>
     <ClCompile Include="AdventureData.cpp">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClCompile>
+    <ClCompile Include="GetAdventurePoints.cpp">
       <Filter>Always100AdventurePoints</Filter>
     </ClCompile>
   </ItemGroup>
