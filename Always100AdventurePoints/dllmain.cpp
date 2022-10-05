@@ -2,6 +2,10 @@
 #include "stdafx.h"
 #include "AdventureData.h"
 #include "GetAdventurePoints.h"
+#include "SetAdventurePoints.h"
+#include "AdventureScore.h"
+
+int AdventureScore::points = 100;
 
 void Initialize()
 {
@@ -14,7 +18,20 @@ void Initialize()
 	//  - Change materials
 	CheatManager.AddCheat("GetAdventureProp",new AdventureData());
 	CheatManager.AddCheat("GetAdventurePoints", new GetAdventurePoints());
+	CheatManager.AddCheat("SetAdventurePoints", new SetAdventurePoints());
 }
+
+member_detour(cScenarioPlayMode_SetCurrentAct_detour, Simulator::cScenarioPlayMode, void(int, bool)) {
+
+	void detoured(int actIndex, bool boolean) 
+	{
+		if (actIndex == 0) {
+			this->field_C4 = AdventureScore::points;
+		}
+		original_function(this,actIndex,boolean);
+	}
+
+};
 
 void Dispose()
 {
@@ -25,6 +42,8 @@ void AttachDetours()
 {
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
+
+	cScenarioPlayMode_SetCurrentAct_detour::attach(GetAddress(Simulator::cScenarioPlayMode,SetCurrentAct));
 }
 
 

@@ -25,6 +25,12 @@
     <ClInclude Include="GetAdventurePoints.h">
       <Filter>Always100AdventurePoints</Filter>
     </ClInclude>
+    <ClInclude Include="SetAdventurePoints.h">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClInclude>
+    <ClInclude Include="AdventureScore.h">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -37,6 +43,9 @@
       <Filter>Always100AdventurePoints</Filter>
     </ClCompile>
     <ClCompile Include="GetAdventurePoints.cpp">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClCompile>
+    <ClCompile Include="SetAdventurePoints.cpp">
       <Filter>Always100AdventurePoints</Filter>
     </ClCompile>
   </ItemGroup>

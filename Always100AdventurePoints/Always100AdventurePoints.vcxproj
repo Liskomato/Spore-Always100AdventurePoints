@@ -102,7 +102,12 @@
       <SubType>
       </SubType>
     </ClInclude>
+    <ClInclude Include="AdventureScore.h" />
     <ClInclude Include="GetAdventurePoints.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SetAdventurePoints.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -123,6 +128,10 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="GetAdventurePoints.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SetAdventurePoints.cpp">
       <SubType>
       </SubType>
     </ClCompile>
