@@ -16,19 +16,17 @@ void Initialize()
 	//  - Add new game modes
 	//  - Add new space tools
 	//  - Change materials
-	CheatManager.AddCheat("GetAdventureProp",new AdventureData());
-	CheatManager.AddCheat("GetAdventurePoints", new GetAdventurePoints());
-	CheatManager.AddCheat("SetAdventurePoints", new SetAdventurePoints());
+	CheatManager.AddCheat("getAdventureProp",new AdventureData());
+	CheatManager.AddCheat("getAdventurePoints", new GetAdventurePoints());
+	CheatManager.AddCheat("setAdventurePoints", new SetAdventurePoints());
 }
 
-member_detour(cScenarioPlayMode_SetCurrentAct_detour, Simulator::cScenarioPlayMode, void(int, bool)) {
+member_detour(cScenarioPlayMode_Initialize_detour, Simulator::cScenarioPlayMode,void(void)) {
 
-	void detoured(int actIndex, bool boolean) 
+	void detoured()
 	{
-		if (actIndex == 0) {
-			this->field_C4 = AdventureScore::points;
-		}
-		original_function(this,actIndex,boolean);
+		original_function(this);
+		this->field_C4 = AdventureScore::points;
 	}
 
 };
@@ -43,7 +41,7 @@ void AttachDetours()
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 
-	cScenarioPlayMode_SetCurrentAct_detour::attach(GetAddress(Simulator::cScenarioPlayMode,SetCurrentAct));
+	cScenarioPlayMode_Initialize_detour::attach(Address(ModAPI::ChooseAddress(0xf1f450,0xf1f060)));
 }
 
 
