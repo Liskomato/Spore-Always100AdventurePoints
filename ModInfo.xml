@@ -1,0 +1,4 @@
+<mod displayName="Always 100 Adventure Points" unique="Always100AdventurePoints" description="Makes all adventures (online/offline) reward the same point amount (by default 100), and allows the player to manually edit and save the Spore point reward count of all adventures." installerSystemVersion="1.0.1.2" hasCustomInstaller="false" isExperimental="false" dllsBuild="2.5.209">
+<prerequisite>Always100AdventurePoints.dll</prerequisite>
+<remove>Always100AdventurePoints.dll</remove>
+</mod>
