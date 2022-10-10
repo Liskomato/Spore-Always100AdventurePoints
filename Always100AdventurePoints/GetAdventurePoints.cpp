@@ -18,7 +18,7 @@ void GetAdventurePoints::ParseLine(const ArgScript::Line& line)
 	// Put your cheat code here.
 	if (Simulator::IsScenarioMode() && ScenarioMode.GetPlayMode())
 	{
-		int points = ScenarioMode.GetPlayMode()->field_C4;
+		uint32_t points = ScenarioMode.GetPlayMode()->mAdventurePoints;
 		App::ConsolePrintF("Adventure points: %i",points);
 	}
 	else {

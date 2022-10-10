@@ -5,10 +5,11 @@
 #include "SetAdventurePoints.h"
 #include "AdventureScore.h"
 
-int AdventureScore::points = 100;
+
 
 void Initialize()
 {
+	
 	// This method is executed when the game starts, before the user interface is shown
 	// Here you can do things such as:
 	//  - Add new cheats
@@ -19,6 +20,9 @@ void Initialize()
 	CheatManager.AddCheat("getAdventureProp",new AdventureData());
 	CheatManager.AddCheat("getAdventurePoints", new GetAdventurePoints());
 	CheatManager.AddCheat("setAdventurePoints", new SetAdventurePoints());
+	if (!AdventureScore::Initialize()) {
+		App::ConsolePrintF("Always 100 Adventure Points ERROR: AdventureScore::Initialize() failed.");	
+	}
 }
 
 member_detour(cScenarioPlayMode_Initialize_detour, Simulator::cScenarioPlayMode,void(void)) {
@@ -26,7 +30,7 @@ member_detour(cScenarioPlayMode_Initialize_detour, Simulator::cScenarioPlayMode,
 	void detoured()
 	{
 		original_function(this);
-		this->field_C4 = AdventureScore::points;
+		this->mAdventurePoints = AdventureScore::points;
 	}
 
 };
@@ -34,6 +38,7 @@ member_detour(cScenarioPlayMode_Initialize_detour, Simulator::cScenarioPlayMode,
 void Dispose()
 {
 	// This method is called when the game is closing
+	
 }
 
 void AttachDetours()

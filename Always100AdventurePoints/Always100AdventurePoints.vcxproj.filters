@@ -48,6 +48,9 @@
     <ClCompile Include="SetAdventurePoints.cpp">
       <Filter>Always100AdventurePoints</Filter>
     </ClCompile>
+    <ClCompile Include="AdventureScore.cpp">
+      <Filter>Always100AdventurePoints</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SdkPathConfig.props" />

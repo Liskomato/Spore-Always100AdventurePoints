@@ -17,16 +17,18 @@ void AdventureData::ParseLine(const ArgScript::Line& line)
 	// Put your cheat code here.
 	if (Simulator::IsScenarioMode()) {
 
-		const char16_t* path = u"C:\\Users\\tende\\Documents\\scenarioprops.prop";
+		string16 path = u"C:\\Users\\tende\\Documents\\scenarioprops.prop";
+		string str;
 		
-		auto output = new IO::FileStream(path);
+		auto output = new IO::FileStream(path.c_str());
 
 		auto data = ScenarioMode.GetResource();
 
 		output->Open(IO::kAccessFlagReadWrite, IO::kCDCreateAlways);
+		str.assign_convert(path);
 
 		if (data->mpPropList.Write(output)) {
-			App::ConsolePrintF("Prop data successfully saved to %s44",path);
+			App::ConsolePrintF("Prop data successfully saved to %s",str);
 		}
 		else {
 			App::ConsolePrintF("Failed to write prop data for adventure.");
