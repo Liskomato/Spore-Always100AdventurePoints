@@ -1,6 +1,8 @@
 # Spore-Always100AdventurePoints
  A Spore ModAPI mod that makes it that all adventures always give out 100 points, regardless whether they're shared or not. The mod also allows for editing said point data to the amount designated by the player.
 
+[Example of edited points](Always100AdventurePoints.png)
+
  This mod adds two new cheats to the game:
  * `getAdventurePoints` - Returns the amount of points your captain will be rewarded in their next adventure.
  * `setAdventurePoints` - Inside adventures, temporarily edits the amount of Spore points the current adventure will reward you. Outside adventures, allows for editing and saving the global adventure point reward this mod will set up.
