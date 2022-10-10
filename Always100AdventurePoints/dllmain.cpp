@@ -1,6 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
-#include "AdventureData.h"
+//#include "AdventureData.h"
 #include "GetAdventurePoints.h"
 #include "SetAdventurePoints.h"
 #include "AdventureScore.h"
@@ -17,7 +17,7 @@ void Initialize()
 	//  - Add new game modes
 	//  - Add new space tools
 	//  - Change materials
-	CheatManager.AddCheat("getAdventureProp",new AdventureData());
+//	CheatManager.AddCheat("getAdventureProp",new AdventureData());
 	CheatManager.AddCheat("getAdventurePoints", new GetAdventurePoints());
 	CheatManager.AddCheat("setAdventurePoints", new SetAdventurePoints());
 	if (!AdventureScore::Initialize()) {

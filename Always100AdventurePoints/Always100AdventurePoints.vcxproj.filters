@@ -19,9 +19,6 @@
     <ClInclude Include="stdafx.h">
       <Filter>Internal</Filter>
     </ClInclude>
-    <ClInclude Include="AdventureData.h">
-      <Filter>Always100AdventurePoints</Filter>
-    </ClInclude>
     <ClInclude Include="GetAdventurePoints.h">
       <Filter>Always100AdventurePoints</Filter>
     </ClInclude>
@@ -38,9 +35,6 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>Internal</Filter>
-    </ClCompile>
-    <ClCompile Include="AdventureData.cpp">
-      <Filter>Always100AdventurePoints</Filter>
     </ClCompile>
     <ClCompile Include="GetAdventurePoints.cpp">
       <Filter>Always100AdventurePoints</Filter>

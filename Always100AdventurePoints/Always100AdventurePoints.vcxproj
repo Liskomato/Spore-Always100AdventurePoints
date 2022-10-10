@@ -98,10 +98,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdventureData.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="AdventureScore.h" />
     <ClInclude Include="GetAdventurePoints.h">
       <SubType>
@@ -115,10 +111,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdventureData.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="AdventureScore.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
