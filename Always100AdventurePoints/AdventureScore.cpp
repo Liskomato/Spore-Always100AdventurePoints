@@ -34,7 +34,7 @@ string16 AdventureScore::GetPath() {
 
 
 bool AdventureScore::Initialize() {
-	ManualBreakpoint();
+//	ManualBreakpoint();
 	string str;
 	// Initialize filestream and prop list.
 	FileStreamPtr stream = new IO::FileStream(AdventureScore::path.c_str());
