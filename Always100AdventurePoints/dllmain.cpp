@@ -46,7 +46,7 @@ void AttachDetours()
 	// Call the attach() method on any detours you want to add
 	// For example: cViewer_SetRenderType_detour::attach(GetAddress(cViewer, SetRenderType));
 
-	cScenarioPlayMode_Initialize_detour::attach(Address(ModAPI::ChooseAddress(0xf1f450,0xf1f060)));
+	cScenarioPlayMode_Initialize_detour::attach(GetAddress(Simulator::cScenarioPlayMode, Initialize));
 }
 
 
