@@ -1,4 +1,5 @@
-# Spore-Always100AdventurePoints
+# Always 100 Adventure Points
+### Latest release can be found [here](https://github.com/Liskomato/Spore-Always100AdventurePoints/releases/latest).
  A Spore ModAPI mod that makes it that all adventures always give out 100 points, regardless whether they're shared or not. The mod also allows for editing said point data to the amount designated by the player.
 
 ![Example of edited points](Always100AdventurePoints.png)
